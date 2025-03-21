@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirthika V's Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: #3498db;
+            padding: 50px 30px;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        header nav {
+            margin-top: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 25px;
+        }
+
+        header nav ul li a {
+            font-size: 13px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ecf0f1;
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        #about .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        #about img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        #about h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #777;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: #ecf0f1;
+            padding: 80px 20px;
+        }
+
+        #projects h2 {
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .project-card a {
+            font-size: 18px;
+            color: #3498db;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 2px solid #3498db;
+            transition: color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            color: #2980b9;
+        }
+
+        /* Resume Section */
+        #resume {
+            padding: 80px 20px;
+            background-color: #ffffff;
+        }
+
+        #resume h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #7f8c8d;
+            line-height: 1.8;
+        }
+
+        .resume-content ul {
+            list-style-type: none;
+        }
+
+        .resume-content li {
+            margin-bottom: 15px;
+        }
+
+        .resume-content .resume-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .resume-content a {
+            font-size: 18px;
+            color: #3498db;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 2px solid #3498db;
+            transition: color 0.3s ease;
+        }
+
+        .resume-content a:hover {
+            color: #2980b9;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #3498db;
+            padding: 80px 20px;
+            color: white;
+        }
+
+        #contact h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        #contact form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact form input,
+        #contact form textarea {
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        #contact form button {
+            padding: 15px;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact form button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 15px 0;
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+
+            #contact form {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2><b>Kirthika V</b></h2>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <img src="kirthi.jpg" alt="Profile Picture">
+            <h2>Hi, I'm Kirthika </h2>
+            <p>Hello! I'm Kirthika, a 2nd-year B.Sc Computer Science student specializing in Artificial Intelligence. 
+                I'm passionate about AI, Full Stack Development, and working towards becoming a Data Scientist. My skills 
+                include Python, HTML, CSS, JavaScript, and tools like Git and VS Code. I'm also learning TensorFlow, 
+                OpenCV, and PyTorch to enhance my AI expertise. I'm driven, focused, and always eager to learn and build 
+                impactful solutions.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h2>Personal Blog</h2>
+                    <p>A simple, responsive blog built with HTML, CSS, and JavaScript.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h2>Portfolio Website</h2>
+                    <p>This portfolio website built with HTML, CSS, and JavaScript showcases my work and skills.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h2>My Resume</h2>
+            <div class="resume-content">
+                <ul>
+
+                </ul>
+                <div class="resume-link">
+                    <a href="Kirthika.resume.pdf" download>Download My Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kirthika. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
